@@ -1,0 +1,51 @@
+<div id='container'>
+  <div class="jumbotron">
+    <h1>Members</h1>
+  </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th> First Name </th>
+          <th> Last Name </th>
+          <th>Reason for Payment</th>
+          <th>Payment Month</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Received BY</th>
+        </tr>
+      </thead>
+      <tbody>
+<!-- pull data only the data is available -->
+        <tr>
+          <td>
+            <!-- [(ngModel)]="user.fullName" #fullName = 'ngModel' -->
+              <input name='firstName' type="firstName"  class="form-control">     
+          </td>
+          <td>
+          <!-- [(ngModel)]="user.fullName" #fullName = 'ngModel' -->
+            <input name='fullName' type="fullName"  class="form-control">     
+          </td>
+          <td> 
+            <select name="reasonArray" class="form-control" >
+              <option *ngFor="let abc of reasonArray">{{abc}}</option>
+           </select>
+          </td> 
+          <td>
+            <input name='payment_month' type="payment_month"  class="form-control">     
+          </td>
+          <td>
+            <input   name='amount' type="amount"  class="form-control">
+          </td>
+          <td>
+            <!-- <date></date> -->
+          </td>
+          <td>
+            <input   name='received_by' type="received_by"  class="form-control">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-lg btn-primary" type="submit"(click)='handleSubmit()'>Submit</button>     
+</div>
+
+  
